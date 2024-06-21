@@ -24,9 +24,17 @@
         })
         .then(response => response.json())
         .then(data => {
-          document.getElementById('result').innerText = JSON.stringify(data);
+          if (data.error) {
+            document.getElementById('result').innerText = 'Error: ' + data.error;
+          } else {
+            document.getElementById('result').innerText = 'Sentiment: ' + data[0].label + ' (' + data[0].score.toFixed(2) + ')';
+          }
+        })
+        .catch(error => {
+          document.getElementById('result').innerText = 'An error occurred: ' + error.message;
         });
       }
     </script>
   </body>
 </html>
+"

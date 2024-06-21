@@ -1,19 +1,23 @@
 body {
     font-family: Arial, sans-serif;
     margin: 50px;
+    background-color: #f4f4f4;
   }
   
   h1 {
     color: #333;
+    text-align: center;
   }
   
   form {
     margin-bottom: 20px;
+    text-align: center;
   }
   
   textarea {
-    width: 100%;
+    width: 80%;
     padding: 10px;
+    margin-bottom: 10px;
   }
   
   button {
@@ -31,4 +35,6 @@ body {
   #result {
     font-size: 18px;
     font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
   }
